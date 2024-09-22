@@ -12,7 +12,7 @@ const GetByIdApi = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    res.status(200).send({ msg: "Data fetched successfully", data: billioner });
+    res.status(200).send({ msg: "Data fetched successfully", Data: billioner });
   } catch (e) {
     res.status(500).send({ msg: "Fetching error", error: e});
   }

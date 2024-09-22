@@ -8,7 +8,7 @@ const PutApi = async (req: Request, res: Response): Promise<void> => {
       { _id: id },
       { $set: updateData }
     );
-    res.status(200).send({ msg: "Data updated successfully" });
+    res.status(200).send({ msg: "Data updated successfully",Data:result });
   } catch (e) {
     res.status(500).send({ msg: "Updating error", error: e });
   }

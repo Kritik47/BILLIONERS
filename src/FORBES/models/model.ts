@@ -2,6 +2,7 @@ import mongoose, { Schema, Document } from 'mongoose';
 export interface Billioner extends Document {
   name: string;
   age: number;
+  gender:string;
   nationality: string;
   netWorth: number;
   sourceOfWealth: string;
@@ -18,6 +19,7 @@ export interface Billioner extends Document {
 const BillionerSchema = new Schema<Billioner>({
   name: { type: String, required: true },
   age: { type: Number, required: true },
+  gender: { type: String, required: true },
   nationality: { type: String, required: true },
   netWorth: { type: Number, required: true },
   sourceOfWealth: { type: String, required: true },
